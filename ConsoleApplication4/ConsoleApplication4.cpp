@@ -147,7 +147,7 @@ void Handle_Data(uint8_t *buff, uint8_t  *Tbuff, uint8_t Rlength)
 
 		}
 	}
-	else   // Data Erros
+	else 
 	{
 		Tbuff[1] = buff[1];
 		Tbuff[2] = buff[2];
@@ -161,16 +161,14 @@ void Handle_Data(uint8_t *buff, uint8_t  *Tbuff, uint8_t Rlength)
 
 
 
-
-
 void receive(uint8_t * buff)
 {
 	Rbuff[0] =  'W';
-	Rbuff[1] =  0x01;   //354
+	Rbuff[1] =  0x01;   
 	Rbuff[2] =  0x02;
 	Rbuff[3] =  0x03; 
 
-	Rbuff[4] =  0xC3;   //2F7
+	Rbuff[4] =  0xC3;   
 	Rbuff[5] =  0x5E;
 	Rbuff[6] =  0x02;
 	Rbuff[7] = 0x75;
